@@ -6,18 +6,39 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: MG Pattern Library
-email: rsollenne@moneygram.com
+title: MoneyGram Pattern Library
+name: MoneyGram Pattern Library
+description: The design system for MoneyGram online applications.
+author:
+  name: Rich Sollenne
+  email: rsollenne@moneygram.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
+# Grunt handles images and assets.
+exclude: ['img', 'css', 'js', 'fonts',
+          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+
+include: ['.htaccess']
 twitter_username: MoneyGramMe
 github_username:  MoneyGramOnline
 
-# Build settings
-markdown: kramdown
+# _config.build.yml sets future and show_drafts to false on `grunt build`
+future: true
+show_drafts: true
 
-exclude: ['node_modules']
+permalink: pretty
+paginate: 1
+paginate_path: 'page:num'
+
+# Markdown library
+markdown: redcarpet
+#   extensions: ['fenced_code_blocks', 'smart']
+
+highlighter: rb-pygments
+
+gems: [jekyll-paginate]
+

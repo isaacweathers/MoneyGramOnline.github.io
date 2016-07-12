@@ -1,0 +1,24 @@
+{
+  "name": "mg-pattern-library",
+  "version": "0.1.0",
+  "authors": [
+    "Rich Sollenne <rsollenne@moneygram.com>"
+  ],
+  "description": "The design system for MoneyGram online applications.",
+  "main": "dist/moneygram.css",
+  "private": true,
+  "ignore": [
+    "src",
+    "gruntfile.js",
+    "package.json",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "highlightjs": "9.2.0",
+    "fontawesome": "4.6.2"
+  }
+}
