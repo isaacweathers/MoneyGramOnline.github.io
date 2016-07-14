@@ -204,3 +204,7 @@ pre {
         }
     }
 }
+
+#menu:not(.mm-menu) {
+  display: none;
+}

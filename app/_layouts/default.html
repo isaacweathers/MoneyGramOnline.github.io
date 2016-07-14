@@ -2,15 +2,18 @@
 <html>
   {% include head.html %}
   <body>
-    {% include offcanvas.html %}
-    {% include header.html %}
+    <div class="content">
+      {% include offcanvas.html %}
+      {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+      <div class="page-content">
+        <div class="wrapper">
+          {{ content }}
+        </div>
       </div>
-    </div>
 
-    {% include footer.html %}
-    </body>
+      {% include footer.html %}
+      {% include js.html %}
+    </div>
+  </body>
 </html>

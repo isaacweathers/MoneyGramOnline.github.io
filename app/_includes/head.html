@@ -6,11 +6,13 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <!-- build:css({app,.tmp}) /css/main.css -->
-  <!-- Syntax highlighting CSS -->
-  <!--<link rel="stylesheet" href="{{ '/css/syntax.css' | prepend: site.baseurl }}">-->
+  <!-- build:css(.) /css/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/jQuery.mmenu/dist/css/jquery.mmenu.all.css">
+  <!-- endbower -->
+  <!-- endbuild -->
 
-  <!-- Custom CSS -->
+  <!-- build:css({app,.tmp}) /css/main.css -->
   <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
   <!-- endbuild -->
 

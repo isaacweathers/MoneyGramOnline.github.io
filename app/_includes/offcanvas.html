@@ -1,35 +1,46 @@
-<ul>
+<nav id="menu">
+  <ul>
 
-  <li>ATOMS
-    <ul>
-      {% for atom in site.data.atoms %}
-      <li>
-          {{ atom.name }}
-      </li>
-      {% endfor %}
-    </ul>
-  </li>
-
-  <li>MOLECULES
-    <ul>
-      {% for molecule in site.data.molecules %}
+    <li><a href="/atoms">ATOMS</a>
+      <ul>
+        {% for atom in site.data.atoms %}
         <li>
-          {{ molecule.name }}
+          <a href="/atoms/{{ atom.name }}">{{ atom.name }}</a>
         </li>
-      {% endfor %}
-    </ul>
-  </li>
+        {% endfor %}
+      </ul>
+    </li>
 
-  <li>PAGES
-    <ul>
-      {% for page in site.data.pages %}
+    <li><a href="/molecules">MOLECULES</a>
+      <ul>
+        {% for molecule in site.data.molecules %}
         <li>
-          {{ page.name }}
+          <a href="/molecules/{{ molecule.name }}">{{ molecule.name }}</a>
         </li>
-      {% endfor %}
-    </ul>
-  </li>
+        {% endfor %}
+      </ul>
+    </li>
 
-  <li>OTHER</li>
+    <li><a href="/templates">TEMPLATES</a>
+      <ul>
+        {% for template in site.data.templates %}
+        <li>
+          <a href="/templates/{{ template.name }}">{{ template.name }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
 
-</ul>
+    <li><a href="/pages">PAGES</a>
+      <ul>
+        {% for page in site.data.pages %}
+        <li>
+          <a href="/pages/{{ page.name }}">{{ page.name }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+
+    <li>OTHER</li>
+  </ul>
+</nav>

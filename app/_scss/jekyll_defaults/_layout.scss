@@ -28,9 +28,7 @@
     float: right;
     line-height: 56px;
 
-    .menu-icon {
-        display: none;
-    }
+
 
     .page-link {
         color: $text-color;
@@ -42,7 +40,7 @@
         }
     }
 
-    @include media-query($on-palm) {
+
         position: absolute;
         top: 9px;
         right: $spacing-unit / 2;
@@ -89,7 +87,7 @@
             }
             margin-left: 20px;
         }
-    }
+
 }
 
 

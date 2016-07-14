@@ -32,7 +32,7 @@ module.exports = function (grunt) {
       jekyll: {
         files: [
           '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
-          '!<%= yeoman.app %>/_bower_components/**/*'
+          '!bower_components/**/*'
         ],
         tasks: ['jekyll:server']
       }
@@ -44,7 +44,7 @@ module.exports = function (grunt) {
             '.jekyll/**/*.html',
             '.tmp/css/**/*.css',
             '{.tmp,<%= yeoman.app %>}/js/**/*.js',
-            '{<%= yeoman.app %>}/_bower_components/**/*.js',
+            'bower_components/**/*.js',
             '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
           ]
         },
@@ -54,7 +54,10 @@ module.exports = function (grunt) {
               ".jekyll",
               ".tmp",
               "<%= yeoman.app %>"
-            ]
+            ],
+            routes: {
+              '/bower_components': './bower_components'
+            }
           },
           watchTask: true
         }
@@ -72,7 +75,7 @@ module.exports = function (grunt) {
             '.jekyll/**/*.html',
             '.tmp/css/**/*.css',
             '{.tmp,<%= yeoman.app %>}/js/**/*.js',
-            '{<%= yeoman.app %>}/_bower_components/**/*.js',
+            'bower_components/**/*.js',
             '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
           ]
         },
@@ -110,7 +113,7 @@ module.exports = function (grunt) {
       options: {
         debugInfo: false,
         lineNumbers: false,
-        loadPath: 'app/_bower_components'
+        loadPath: 'bower_components'
       },
       dist: {
         files: [{
