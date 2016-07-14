@@ -1,0 +1,35 @@
+<ul>
+
+  <li>ATOMS
+    <ul>
+      {% for atom in site.data.atoms %}
+      <li>
+          {{ atom.name }}
+      </li>
+      {% endfor %}
+    </ul>
+  </li>
+
+  <li>MOLECULES
+    <ul>
+      {% for molecule in site.data.molecules %}
+        <li>
+          {{ molecule.name }}
+        </li>
+      {% endfor %}
+    </ul>
+  </li>
+
+  <li>PAGES
+    <ul>
+      {% for page in site.data.pages %}
+        <li>
+          {{ page.name }}
+        </li>
+      {% endfor %}
+    </ul>
+  </li>
+
+  <li>OTHER</li>
+
+</ul>
