@@ -1,0 +1,1 @@
+$(document).ready(function(){$(function(){$("nav#menu").mmenu({extensions:["pagedim-black","theme-dark"],offCanvas:{position:"right",zposition:"front",pageSelector:".content"},searchfield:{resultsPanel:!0,showTextItems:!0},navbars:[{position:"top",content:["searchfield"]}]},{searchfield:{clear:!0}})})});
