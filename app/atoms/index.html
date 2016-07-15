@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<h1>ATOMS</h1>
+
+<ul>
+  <li><a href="/atoms">ATOMS</a>
+    <ul>
+      {% for atom in site.data.atoms %}
+      <li>
+        <a href="/atoms/{{ atom.name }}">{{ atom.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </li>
+</ul>
