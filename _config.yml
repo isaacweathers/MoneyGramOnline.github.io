@@ -15,12 +15,26 @@ author:
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 # Grunt handles images and assets.
-exclude: ['img', 'css', 'js', 'fonts',
-          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+exclude: ['img', 'css', 'js', 'fonts', '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
 
 include: ['.htaccess']
 twitter_username: MoneyGramMe
 github_username:  MoneyGramOnline
+
+collections:
+  atoms:
+    output: true
+    permalink: /atoms/:path/
+  molecules:
+    output: true
+    permalink: /molecules/:path/
+  templates:
+    output: true
+    permalink: /templates/:path/
+  pages:
+    output: true
+    permalink: /pages/:path/
+
 
 # _config.build.yml sets future and show_drafts to false on `grunt build`
 future: true

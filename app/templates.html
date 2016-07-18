@@ -1,0 +1,20 @@
+---
+layout: default
+title:  "Templates"
+date:   2016-07-12 13:36:15 -0500
+categories: templates
+---
+
+<div class="home">
+  <h1>{{ page.title }}</h1>
+  <ul class="collections-list">
+    {% for molecule in site.templates %}
+    <li>
+      <span class="post-meta">{{ template.date | date: "%b %-d, %Y" }}</span>
+      <h2>
+        <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ template.title }}</a>
+      </h2>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

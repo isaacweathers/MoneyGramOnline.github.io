@@ -3,9 +3,9 @@
 
     <li><a href="/atoms">ATOMS</a>
       <ul>
-        {% for atom in site.data.atoms %}
+        {% for atom in site.atoms %}
         <li>
-          <a href="/atoms/{{ atom.name }}">{{ atom.name }}</a>
+          <a href="{{ atom.url }}">{{ atom.title }}</a>
         </li>
         {% endfor %}
       </ul>
@@ -13,9 +13,9 @@
 
     <li><a href="/molecules">MOLECULES</a>
       <ul>
-        {% for molecule in site.data.molecules %}
+        {% for molecule in site.molecules %}
         <li>
-          <a href="/molecules/{{ molecule.name }}">{{ molecule.name }}</a>
+          <a href="{{ molecule.url }}">{{ molecule.title }}</a>
         </li>
         {% endfor %}
       </ul>
@@ -23,9 +23,9 @@
 
     <li><a href="/templates">TEMPLATES</a>
       <ul>
-        {% for template in site.data.templates %}
+        {% for template in site.templates %}
         <li>
-          <a href="/templates/{{ template.name }}">{{ template.name }}</a>
+          <a href="{{ template.url }}">{{ template.title }}</a>
         </li>
         {% endfor %}
       </ul>
@@ -33,14 +33,13 @@
 
     <li><a href="/pages">PAGES</a>
       <ul>
-        {% for page in site.data.pages %}
+        {% for page in site.pages %}
         <li>
-          <a href="/pages/{{ page.name }}">{{ page.name }}</a>
+          <a href="{{ page.url }}">{{ page.title }}</a>
         </li>
         {% endfor %}
       </ul>
     </li>
 
-    <li>OTHER</li>
   </ul>
 </nav>
