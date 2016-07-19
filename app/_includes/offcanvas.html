@@ -1,6 +1,7 @@
 <nav id="menu">
   <ul>
-    {% for collection in site.collections | sort: 'weight' %}
+    {% assign sorted_collections = (site.collections | sort: 'weight') %}
+    {% for collection in sorted_collections %}
       {% if collection.name %}
         <li><a href="/{{ collection.name }}">{{ collection.name | upcase }}</a>
           <ul>
