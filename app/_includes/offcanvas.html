@@ -1,45 +1,17 @@
 <nav id="menu">
   <ul>
-
-    <li><a href="/atoms">ATOMS</a>
-      <ul>
-        {% for atom in site.atoms %}
-        <li>
-          <a href="{{ atom.url }}">{{ atom.title }}</a>
+    {% for collection in site.collections | sort: 'weight' %}
+      {% if collection.name %}
+        <li><a href="/{{ collection.name }}">{{ collection.name | upcase }}</a>
+          <ul>
+            {% for pattern in site.[collection.name] %}
+            <li>
+              <a href="{{ pattern.url }}">{{ pattern.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
         </li>
-        {% endfor %}
-      </ul>
-    </li>
-
-    <li><a href="/molecules">MOLECULES</a>
-      <ul>
-        {% for molecule in site.molecules %}
-        <li>
-          <a href="{{ molecule.url }}">{{ molecule.title }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </li>
-
-    <li><a href="/templates">TEMPLATES</a>
-      <ul>
-        {% for template in site.templates %}
-        <li>
-          <a href="{{ template.url }}">{{ template.title }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </li>
-
-    <li><a href="/pages">PAGES</a>
-      <ul>
-        {% for page in site.pages %}
-        <li>
-          <a href="{{ page.url }}">{{ page.title }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </li>
-
+      {% endif %}
+    {% endfor %}
   </ul>
 </nav>

@@ -23,15 +23,23 @@ github_username:  MoneyGramOnline
 
 collections:
   atoms:
+    name: atoms
+    weight: 1
     output: true
     permalink: /atoms/:path/
   molecules:
+    name: molecules
+    weight: 2
     output: true
     permalink: /molecules/:path/
   templates:
+    name: templates
+    weight: 3
     output: true
     permalink: /templates/:path/
   pages:
+    name: pages
+    weight: 4
     output: true
     permalink: /pages/:path/
 
